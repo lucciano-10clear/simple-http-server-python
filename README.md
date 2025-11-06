@@ -55,3 +55,4 @@ Target group: new (health check path /)
 
 Wait for service to reach RUNNING and HEALTHY state.
 Your load balancer’s DNS name now serves your HTTP response.
+
