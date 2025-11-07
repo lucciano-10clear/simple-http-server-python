@@ -8,7 +8,7 @@ resource "aws_lb" "alb" {
 }
 
 resource "aws_lb_target_group" "tg" {
-  name        = "${var.project_name}-tg"
+  name        = "${var.project_name}-tg-ip"
   port        = var.container_port
   protocol    = "HTTP"
   vpc_id      = aws_vpc.this.id
@@ -20,6 +20,10 @@ resource "aws_lb_target_group" "tg" {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     matcher             = "200-399"
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
 
