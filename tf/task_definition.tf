@@ -9,7 +9,7 @@ resource "aws_ecs_task_definition" "app" {
   container_definitions = jsonencode([
     {
       name      = "${var.project_name}-container"
-      image     = "nginx:latest"
+      image     = "${local.ecr_repo_url}:${var.image_tag}"
       essential = true
       portMappings = [
         {
