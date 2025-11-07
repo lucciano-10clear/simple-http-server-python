@@ -33,7 +33,7 @@ variable "desired_count" {
 
 variable "container_port" {
   type    = number
-  default = 8080
+  default = 80
 }
 
 variable "task_cpu" {
