@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 hostName = "0.0.0.0"
-serverPort = 8080
+serverPort = 80
 
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
